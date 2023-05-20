@@ -114,3 +114,10 @@ cargo run
 
 #### comparison operators
 - the entities being compared have to be the same data type
+
+### compound data types 
+
+- array: homogeneous data 
+- tuples: heterogeneous data
+
+- zero indexed
