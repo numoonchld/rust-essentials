@@ -22,6 +22,8 @@ fn main() {
     b_primitive_data_types::boolean_operations();
     println!("Comparison --------------------------------");
     b_primitive_data_types::comparison_operations();
+    println!("Char --------------------------------");
+    b_primitive_data_types::chars();
 
     println!("=========================================");
     println!("HELLO WORLD");

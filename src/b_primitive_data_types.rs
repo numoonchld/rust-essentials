@@ -120,3 +120,11 @@ pub fn comparison_operations() {
     println!("a is less than b is {}", a < b);
     println!("a is less than or equal to b is {}", a <= b);
 }
+
+pub fn chars() {
+    let letter = 'a';
+    let number = '1';
+    let finger = '\u{261D}';
+
+    println!("{}\n{}\n{}", letter, number, finger);
+}
