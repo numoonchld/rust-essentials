@@ -18,6 +18,8 @@ fn main() {
     b_primitive_data_types::arithmetic_operations();
     println!("Bitwise --------------------------------");
     b_primitive_data_types::bitwise_operations();
+    println!("Boolean --------------------------------");
+    b_primitive_data_types::boolean();
 
     println!("=========================================");
     println!("HELLO WORLD");

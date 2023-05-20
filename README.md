@@ -98,3 +98,16 @@ cargo run
     - Multiplication
     - Addition
     - Subtraction
+
+#### booleans
+
+- 0: false
+- 1: true
+
+- casting boolean into integer will result in 1 or 0 
+
+- applying boolean operations to booleans also result in boolean values 
+
+##### short-circuiting
+- &&: short circuiting AND
+- ||: short circuiting OR

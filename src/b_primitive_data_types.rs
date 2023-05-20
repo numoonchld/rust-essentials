@@ -79,3 +79,20 @@ pub fn bitwise_operations() {
     // right shift
     println!("value right shift 2 is {:08b}", value >> 2);
 }
+
+pub fn boolean() {
+    let a = true;
+    let b = false;
+
+    println!("a is {a} and b is {b}");
+    println!("not a is {}", !a);
+    println!("a AND b is {}", a & b);
+    println!("a OR b is {}", a | b);
+    println!("a XOR b is {}", a ^ b);
+
+    let c = (a ^ b) | (a & b);
+    println!("c is {c}");
+
+    let d = (a ^ b) || panic!();
+    println!("d is {d}");
+}
