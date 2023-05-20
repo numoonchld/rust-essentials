@@ -111,3 +111,6 @@ cargo run
 ##### short-circuiting
 - &&: short circuiting AND
 - ||: short circuiting OR
+
+#### comparison operators
+- the entities being compared have to be the same data type

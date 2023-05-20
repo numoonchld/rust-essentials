@@ -80,7 +80,7 @@ pub fn bitwise_operations() {
     println!("value right shift 2 is {:08b}", value >> 2);
 }
 
-pub fn boolean() {
+pub fn boolean_operations() {
     let a = true;
     let b = false;
 
@@ -95,4 +95,28 @@ pub fn boolean() {
 
     let d = (a ^ b) || panic!();
     println!("d is {d}");
+}
+
+pub fn comparison_operations() {
+    let a = 1;
+    let b = 2;
+
+    println!("a is {a} and b is {b}");
+    println!("a is equal to b is {}", a == b);
+    println!("a is not equal to b is {}", a != b);
+    println!("a is greater than b is {}", a > b);
+    println!("a is greater than or equal to b is {}", a >= b);
+    println!("a is less than b is {}", a < b);
+    println!("a is less than or equal to b is {}", a <= b);
+
+    let a = true;
+    let b = false;
+
+    println!("a is {a} and b is {b}");
+    println!("a is equal to b is {}", a == b);
+    println!("a is not equal to b is {}", a != b);
+    println!("a is greater than b is {}", a > b);
+    println!("a is greater than or equal to b is {}", a >= b);
+    println!("a is less than b is {}", a < b);
+    println!("a is less than or equal to b is {}", a <= b);
 }

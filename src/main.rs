@@ -19,7 +19,9 @@ fn main() {
     println!("Bitwise --------------------------------");
     b_primitive_data_types::bitwise_operations();
     println!("Boolean --------------------------------");
-    b_primitive_data_types::boolean();
+    b_primitive_data_types::boolean_operations();
+    println!("Comparison --------------------------------");
+    b_primitive_data_types::comparison_operations();
 
     println!("=========================================");
     println!("HELLO WORLD");
