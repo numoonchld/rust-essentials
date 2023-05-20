@@ -1,10 +1,14 @@
 mod a_hello_world;
 mod b_primitive_data_types;
+mod c_formatting_print_statements;
 
 fn main() {
     println!("=========================================");
+    println!("PRINT FORMATTING");
+    c_formatting_print_statements::formatting_print();
+
+    println!("=========================================");
     println!("PRIMITIVE VARIABLES");
-    // primitive data types
     b_primitive_data_types::primitive_data_types();
     println!("Integers --------------------------------");
     b_primitive_data_types::integers();
@@ -12,9 +16,10 @@ fn main() {
     b_primitive_data_types::floating_points();
     println!("Arithmetic --------------------------------");
     b_primitive_data_types::arithmetic_operations();
+    println!("Bitwise --------------------------------");
+    b_primitive_data_types::bitwise_operations();
 
     println!("=========================================");
     println!("HELLO WORLD");
-    // anatomy of a program
     a_hello_world::hello_world();
 }
