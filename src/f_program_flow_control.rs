@@ -68,4 +68,20 @@ pub fn loops() {
     println!("result is {result}");
 }
 
-pub fn while_loops() {}
+pub fn while_loops() {
+    let mut while_count = 0;
+
+    while while_count < 10 {
+        while_count += 1;
+        println!("while_count is {while_count}");
+    }
+
+    // iterating over an array:
+    let letters = ['a', 'b', 'c'];
+    let mut while_count_2 = 0;
+
+    while while_count_2 < letters.len() {
+        println!("letter is {}", letters[while_count_2]);
+        while_count_2 += 1;
+    }
+}
