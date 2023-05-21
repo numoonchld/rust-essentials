@@ -3,8 +3,16 @@ mod b_primitive_data_types;
 mod c_formatting_print_statements;
 mod d_compound_data_types;
 mod e_functions;
+mod f_program_flow_control;
 
 fn main() {
+    println!("=========================================");
+    println!("PROGRAM FLOW CONTROL");
+    f_program_flow_control::conditionals();
+    f_program_flow_control::conditional_assignment();
+    f_program_flow_control::loops();
+    f_program_flow_control::while_loops();
+
     println!("=========================================");
     println!("FUNCTIONS");
     e_functions::main();

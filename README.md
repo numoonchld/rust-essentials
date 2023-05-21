@@ -156,3 +156,10 @@ cargo run
 - used when there is no meaningful value returned from a function
 
 - represented with `()`
+
+## program flow control
+
+- `if` always expects a boolean
+    - it does not work with "truthy/falsy" type checks
+
+- `loop` can pass a value when it exits out of the loop
