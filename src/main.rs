@@ -7,6 +7,8 @@ fn main() {
     println!("=========================================");
     println!("COMPOUND DATA TYPES");
     d_compound_data_types::arrays();
+    d_compound_data_types::multi_dimensional_arrays();
+    d_compound_data_types::tuples();
 
     println!("=========================================");
     println!("PRINT FORMATTING");

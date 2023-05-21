@@ -121,3 +121,8 @@ cargo run
 - tuples: heterogeneous data
 
 - zero indexed
+
+#### multidimensional arrays
+
+- the inner arrays must all be of the same length
+    - if there are different number of columns in some of the inner arrays, then it is considered to be of a different type altogether 

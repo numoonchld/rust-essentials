@@ -1,5 +1,6 @@
 pub fn arrays() {
     let letters = ['a', 'b', 'c'];
+    println!("letters is {:?}", letters);
     let first_letter = letters[0];
 
     println!("first_letter is {first_letter}");
@@ -17,3 +18,16 @@ pub fn arrays() {
     println!("numbers is {:?}", numbers);
     println!("last number is {}", numbers[4])
 }
+
+pub fn multi_dimensional_arrays() {
+    let parking_lot = [[1, 2, 3], [4, 5, 6]];
+    println!("parking lot is {:?}", parking_lot);
+    let number = parking_lot[0][1];
+    println!("number is {}", number);
+
+    // initialize a 3D array:
+    let garage = [[[0; 10]; 5]; 3];
+    println!("garage array is: {:?}", garage)
+}
+
+pub fn tuples() {}
