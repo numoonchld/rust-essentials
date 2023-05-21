@@ -117,10 +117,11 @@ cargo run
 
 ### compound data types 
 
-- array: homogeneous data 
-- tuples: heterogeneous data
+- array: homogeneous (same) data 
+- tuples: heterogeneous (mixed) data
 
 - zero indexed
+- ordered
 
 #### multidimensional arrays
 

@@ -30,4 +30,16 @@ pub fn multi_dimensional_arrays() {
     println!("garage array is: {:?}", garage)
 }
 
-pub fn tuples() {}
+pub fn tuples() {
+    let tuple_stuff = (10, 3.14, 'x');
+    println!("tuple is {:?}", tuple_stuff);
+    println!("first item is {}", tuple_stuff.0);
+
+    let mut tuple_stuff_2: (u8, f32, char) = (10, 3.14, 'y');
+    tuple_stuff_2.0 += 3;
+    println!("first value increased by 3 is: {:?}", tuple_stuff_2.0);
+
+    // destructuring tuples
+    let (_a, b, _c) = tuple_stuff;
+    println!("b is {b}")
+}
