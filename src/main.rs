@@ -2,8 +2,13 @@ mod a_hello_world;
 mod b_primitive_data_types;
 mod c_formatting_print_statements;
 mod d_compound_data_types;
+mod e_functions;
 
 fn main() {
+    println!("=========================================");
+    println!("FUNCTIONS");
+    e_functions::main();
+
     println!("=========================================");
     println!("COMPOUND DATA TYPES");
     d_compound_data_types::arrays();

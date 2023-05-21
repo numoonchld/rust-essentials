@@ -115,15 +115,44 @@ cargo run
 #### comparison operators
 - the entities being compared have to be the same data type
 
-### compound data types 
+## compound data types 
 
-- array: homogeneous (same) data 
-- tuples: heterogeneous (mixed) data
-
+### array
+- homogeneous (same) data 
+- zero indexed
+- ordered
+### tuples: 
+- heterogeneous (mixed) data
 - zero indexed
 - ordered
 
-#### multidimensional arrays
+### multidimensional arrays
 
 - the inner arrays must all be of the same length
     - if there are different number of columns in some of the inner arrays, then it is considered to be of a different type altogether 
+
+## functions
+
+- `fn` keyword to define functions
+- use function name followed by`()` to invoke function
+
+### parameter 
+
+- provide input data to a function
+- defined in the function signature
+
+### statement vs. expression
+
+- statement ends with semicolon
+    - does not return a value 
+- expression does not end with semi-colon
+    - evaluates to a resulting value
+
+### return values
+- if the last line of a function is an expression, i.e. without a semi-colon, then the value of that expression gets passed out as the return value of that function
+
+#### unit data type
+
+- used when there is no meaningful value returned from a function
+
+- represented with `()`
