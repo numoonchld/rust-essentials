@@ -85,3 +85,47 @@ pub fn while_loops() {
         while_count_2 += 1;
     }
 }
+
+pub fn for_loops() {
+    let message = ['h', 'e', 'l', 'l', 'o'];
+
+    for item in message {
+        println!("item is {item}");
+    }
+
+    for (index, item) in message.iter().enumerate() {
+        println!("item {index} is {item}");
+    }
+
+    for (index, &item) in message.iter().enumerate() {
+        println!("item {index} is {item}");
+        if item == 'e' {
+            break;
+        }
+    }
+
+    for number in 0..5 {
+        println!("number is {number}");
+    }
+}
+
+pub fn nested_loops() {
+    let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+    for row in matrix {
+        for col in row {
+            print!("{col}\t");
+        }
+        println!();
+    }
+
+    let mut matrix_2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+    for row in matrix_2.iter_mut() {
+        for num in row.iter_mut() {
+            *num += 10;
+            print!("{num}\t")
+        }
+        println!()
+    }
+}

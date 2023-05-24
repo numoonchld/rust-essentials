@@ -12,6 +12,8 @@ fn main() {
     f_program_flow_control::conditional_assignment();
     f_program_flow_control::loops();
     f_program_flow_control::while_loops();
+    f_program_flow_control::for_loops();
+    f_program_flow_control::nested_loops();
 
     println!("=========================================");
     println!("FUNCTIONS");
