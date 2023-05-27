@@ -4,8 +4,15 @@ mod c_formatting_print_statements;
 mod d_compound_data_types;
 mod e_functions;
 mod f_program_flow_control;
+mod g_ownership;
 
 fn main() {
+    println!("=========================================");
+    println!("OWNERSHIP");
+    g_ownership::scope();
+    println!("Shadow and scope --------------------------------");
+    g_ownership::shadow_and_scope();
+
     println!("=========================================");
     println!("PROGRAM FLOW CONTROL");
     f_program_flow_control::conditionals();

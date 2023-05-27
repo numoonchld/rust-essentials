@@ -163,3 +163,46 @@ cargo run
     - it does not work with "truthy/falsy" type checks
 
 - `loop` can pass a value when it exits out of the loop
+
+## ownership
+
+- scope contributes to when a variable is in memory and when it goes away from memory
+
+### shadowing 
+- variables are immutable,
+- but new variables with same name can be initialized 
+    - new variable will mask the old variable with the same name as long as both are in the same scope
+    - it does not replace the exist variable, it only masks it in the order and scope
+- this is *not the same* as changing the value of a mutable variable, this is simply shadowing/masking 
+- cna lead to weird bugs in program
+
+### stack and heap memory
+- in rust, program memory is divided into stack and heap
+
+#### stack memory
+- values stored in sequential order
+- added and removed in LIFO (last in, first out)
+- like a stack of boxes piling up 
+- stack automatically grows and shrinks as the program executes
+
+- push and pop data quickly
+- access data quickly
+- small, known fixed data size only allowed
+    - various sizes allowed, but should be fixed through run time execution and known at compile time
+
+#### heap memory
+
+- storing boxes of data in a giant warehouse
+- allocates memory for data in heap
+    - location of memory is given with pointer 
+    - pointers have fixed size, so can be stored on the stack
+
+- since we have to follow a pointer, accessing heap data is slower than the stack
+- adding is slower also, becuse we have to search for a suitable section of memory to store data
+
+- we can dynamically resize data unlike on the stack
+- heap memory space is larger compared to the stack 
+
+### string data type
+
+
