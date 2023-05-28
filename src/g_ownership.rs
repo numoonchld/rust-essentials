@@ -23,3 +23,11 @@ pub fn shadow_and_scope() {
     }
     println!("planet is {planet}");
 }
+
+pub fn string_type() {
+    let mut message = String::from("Earth");
+    println!("message is: {message}");
+
+    message.push_str(" is home"); // this grows the string on the heap to include the appended string
+    println!("message is: {message}");
+}

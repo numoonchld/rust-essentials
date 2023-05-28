@@ -164,7 +164,7 @@ cargo run
 
 - `loop` can pass a value when it exits out of the loop
 
-## ownership
+## memory management
 
 - scope contributes to when a variable is in memory and when it goes away from memory
 
@@ -190,6 +190,15 @@ cargo run
 - small, known fixed data size only allowed
     - various sizes allowed, but should be fixed through run time execution and known at compile time
 
+##### fixed size 
+
+- integer 
+- floating point
+- boolean
+- char
+- array 
+- tuple
+
 #### heap memory
 
 - storing boxes of data in a giant warehouse
@@ -205,4 +214,53 @@ cargo run
 
 ### string data type
 
+- string: sequence of characters 
+    - since the string is stored on the heap instead of the stack, it can be dynamically changed
 
+**string literal**
+- hard-coded into executables
+- immutable
+- value must be known at compile time
+- cannot be used for user input during runtime
+**string type**
+- allocated on the head
+- mutable
+- dynamic space allocation during runtime
+
+
+#### string type
+
+- pointer stored on the stack, (along with length and capacity)
+    - actual string stored on the heap
+    - sometimes the capacity can be more than the length, when the string has been allocated more space on the heap then required, leaving it room to grow into the allocated capacity 
+    - capacity should always be greater than or equal to the length
+
+##### dynamic resizig of strings
+
+- mutable strings can grow in size
+    - `push_str` grows the string on the heap to include the appended string
+- if the string had to be moved to accommodate the addition, the pointer of the string will be updated accordingly, so it is safe to assume that the pointer will change each time the capacity of the string changes 
+
+- since strings can be dynamically resized, they can be manipulated in a [ton of ways](https://doc.rust-lang.org/std/string/struct.String.html)
+    
+
+### memory clean-up and ownership
+
+- it is necessary to clean up allocated memory block that are no longer needed
+
+>>> _memory leak_: memory is failed to be released after use 
+>>> _invalid memory access_: after a piece of data is freed from the memory access to it is attempted
+
+#### traditional approach
+- make the programmer responsible for memory management such as in C and C++ (`malloc()` and `free()`)
+    - programmer has a lot of control but leads to a lot of bugs and memory leaks and invalid memory access
+
+
+##### garbage collection
+- automatically cleans up memory by running a subroutine to detect unused memory for clean up, such as Java, C#, Python, Ruby, Go etc. 
+    - this approach is easy to use, but automatic memory clean-up can be inefficient and waste a lot of memory compared to traditional approach
+    - the garbage collector can run at inconvenient times, causing program to slow down or pause at critical moments
+
+##### ownership
+
+- rust's somewhat unique approach to memory management 

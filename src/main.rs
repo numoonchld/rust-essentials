@@ -12,6 +12,8 @@ fn main() {
     g_ownership::scope();
     println!("Shadow and scope --------------------------------");
     g_ownership::shadow_and_scope();
+    println!("String data type --------------------------------");
+    g_ownership::string_type();
 
     println!("=========================================");
     println!("PROGRAM FLOW CONTROL");
