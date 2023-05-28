@@ -14,6 +14,14 @@ fn main() {
     g_ownership::shadow_and_scope();
     println!("String data type --------------------------------");
     g_ownership::string_type();
+    println!("Move and Clone --------------------------------");
+    g_ownership::ownership_move();
+    g_ownership::ownership_clone();
+    g_ownership::ownership_copy();
+    g_ownership::ownership_transfer_in_functions_stack_resource();
+    g_ownership::ownership_transfer_in_functions_heap_resource();
+    g_ownership::ownership_transfer_in_functions_heap_resource_clone();
+    g_ownership::ownership_transfer_in_functions_heap_resource_return_ownership();
 
     println!("=========================================");
     println!("PROGRAM FLOW CONTROL");

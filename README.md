@@ -256,11 +256,62 @@ cargo run
     - programmer has a lot of control but leads to a lot of bugs and memory leaks and invalid memory access
 
 
-##### garbage collection
+#### garbage collection
 - automatically cleans up memory by running a subroutine to detect unused memory for clean up, such as Java, C#, Python, Ruby, Go etc. 
     - this approach is easy to use, but automatic memory clean-up can be inefficient and waste a lot of memory compared to traditional approach
     - the garbage collector can run at inconvenient times, causing program to slow down or pause at critical moments
 
-##### ownership
+#### ownership
 
-- rust's somewhat unique approach to memory management 
+- rust's somewhat unique approach to memory management
+    - *resources can only have one owner at a time* 
+- variables are responsible for freeing their own resources
+
+>>> every value is owned by one and only one variable called its owner
+>>> when owning variable goes out of scope, the value is dropped and memory is freed
+
+- ownership can be transferred from one owner to another, 
+    - but at a given point in time, a value can have only one owner
+
+- memory safe for invalid access
+- efficient since no garbage collector overhead
+
+- requires understanding of ownership, makes language difficult to learn 
+    - different paradigm from other languages 
+
+- different types of data work differently 
+
+##### `move`
+
+- moving a value invalidates the first variable
+    - new variable points to the location of the resource in heap memory 
+    - old variable is removed from stack 
+- similar to shallow copy
+
+##### `clone`
+
+- cloning creates two instances of the resource in heap 
+    - both old and the new variables point to their own resource in heal memory
+- the clones are independent and what we do to one will not affect the other 
+
+##### `copy`
+
+- for stack resources, the variable directly is copied instead of ownership transfer 
+
+##### `=` operator 
+- for stack resources, `=` does a clone by default
+- for heap resources, `=` does a move by default
+    - cloning must be done explicitly
+
+##### functions and ownership
+
+- when values are passed into a function, 
+    - if the value is an integer, i.e. a stack resource, a copy of the value is passed 
+    - if the value is a string, i.e. a heap based resource, then the ownership is transfer, not a clone
+        - no implicit copy of the heap data is made
+        - use the `clone()` method on the heap resource in the argument of the function to pass in a deep copy of the value into the function  
+        - if changes are made to the clone inside the function, those changes will not be reflected back in the original resource outside the function  
+
+- after the function is finished,
+    - the value passed into will be dropped from memory as the resource will go out of scope 
+    - the ownership of the resource can be transferred back with an return expression
