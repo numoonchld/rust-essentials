@@ -5,8 +5,15 @@ mod d_compound_data_types;
 mod e_functions;
 mod f_program_flow_control;
 mod g_ownership;
+mod h_references;
 
 fn main() {
+    println!("=========================================");
+    println!("REFERENCING");
+    h_references::no_borrowing();
+    h_references::borrowing_for_access();
+    h_references::borrowing_for_modification();
+
     println!("=========================================");
     println!("OWNERSHIP");
     g_ownership::scope();

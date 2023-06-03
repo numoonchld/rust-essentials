@@ -315,3 +315,21 @@ cargo run
 - after the function is finished,
     - the value passed into will be dropped from memory as the resource will go out of scope 
     - the ownership of the resource can be transferred back with an return expression
+
+#### references
+
+- rust allows borrowing and using data without taking ownership of it
+- create references using the borrow operator: `&`
+
+>>> `&`: borrow operator
+
+- multiple immutable references allowed per scope
+    - no particular restrictions to the number of these in a given scope
+
+##### mutable referencing 
+- allows for data modification along with data access of non-mutable referencing
+
+- only one mutable reference allowed per scope 
+    - to prevent data races that occurs with multiple mutable references
+    - additional reference can neither be immutable or non-immutable
+    - only one reference per scope when it is a mutable reference   
