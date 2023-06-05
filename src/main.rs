@@ -6,13 +6,19 @@ mod e_functions;
 mod f_program_flow_control;
 mod g_ownership;
 mod h_references;
+mod i_modules;
 
 fn main() {
+    println!("=========================================");
+    println!("MODULES");
+    i_modules::io_module();
+
     println!("=========================================");
     println!("REFERENCING");
     h_references::no_borrowing();
     h_references::borrowing_for_access();
     h_references::borrowing_for_modification();
+    h_references::sliced_referencing();
 
     println!("=========================================");
     println!("OWNERSHIP");

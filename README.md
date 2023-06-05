@@ -329,7 +329,24 @@ cargo run
 ##### mutable referencing 
 - allows for data modification along with data access of non-mutable referencing
 
-- only one mutable reference allowed per scope 
+- only one mutable referencing allowed per scope 
     - to prevent data races that occurs with multiple mutable references
     - additional reference can neither be immutable or non-immutable
     - only one reference per scope when it is a mutable reference   
+
+##### sliced referencing
+- refer to a contiguous section of a collection
+- commonly encountered as the string slice data type `&str`
+- string literal are slices
+    - the slice units are bytes
+
+- borrowed referencing to a string is not the same as a string slice referencing
+    - i.e `&String !== &str`
+
+## modules
+
+### prelude
+- auto imported modules for every rust program byt default 
+
+### `use` 
+- modules not included in the prelude need to be imported with the `use` keyword explicitly

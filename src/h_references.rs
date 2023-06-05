@@ -43,3 +43,11 @@ fn process_fuel_with_borrowing_for_modification(propellant: &mut String) -> usiz
     let length = propellant.len();
     length
 }
+
+pub fn sliced_referencing() {
+    let message = String::from("Greetings from Earth!");
+    println!("message is {}", message);
+
+    let last_word = &message[15..15 + 5]; // the units are bytest
+    println!("last word is {} ", last_word);
+}
