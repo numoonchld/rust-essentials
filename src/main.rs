@@ -12,6 +12,7 @@ fn main() {
     println!("=========================================");
     println!("MODULES");
     i_modules::io_module();
+    i_modules::rand_crate();
 
     println!("=========================================");
     println!("REFERENCING");

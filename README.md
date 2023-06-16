@@ -350,3 +350,7 @@ cargo run
 
 ### `use` 
 - modules not included in the prelude need to be imported with the `use` keyword explicitly
+
+### external crates conflict
+- methods borrowed from external crates must be carefully handled  
+    - ensure there are no conflicts function names or variable names from with in the internal program
