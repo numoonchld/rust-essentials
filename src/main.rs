@@ -7,8 +7,15 @@ mod f_program_flow_control;
 mod g_ownership;
 mod h_references;
 mod i_modules;
+mod j_input_output;
 
 fn main() {
+    println!("=========================================");
+    println!("INPUT/OUTPUT");
+    j_input_output::cli_arguments();
+    j_input_output::file_read();
+    j_input_output::file_write();
+
     println!("=========================================");
     println!("MODULES");
     i_modules::io_module();
