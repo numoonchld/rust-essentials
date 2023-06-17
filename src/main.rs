@@ -8,8 +8,15 @@ mod g_ownership;
 mod h_references;
 mod i_modules;
 mod j_input_output;
+mod k_structs;
 
 fn main() {
+    println!("=========================================");
+    println!("STRUCTS");
+    k_structs::structs_demo();
+    k_structs::struct_methods();
+    k_structs::tuple_structs();
+
     println!("=========================================");
     println!("INPUT/OUTPUT");
     j_input_output::cli_arguments();
