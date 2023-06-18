@@ -9,8 +9,14 @@ mod h_references;
 mod i_modules;
 mod j_input_output;
 mod k_structs;
+mod l_generic_types;
 
 fn main() {
+    println!("=========================================");
+    println!("GENERICS");
+    l_generic_types::generic_rectangle();
+    l_generic_types::show_biggest();
+
     println!("=========================================");
     println!("STRUCTS");
     k_structs::structs_demo();
